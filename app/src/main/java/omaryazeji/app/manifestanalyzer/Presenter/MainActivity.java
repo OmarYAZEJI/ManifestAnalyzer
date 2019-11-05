@@ -1,4 +1,4 @@
-package omaryazeji.app.manifestanalyzer.Activites;
+package omaryazeji.app.manifestanalyzer.Presenter;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,13 +9,13 @@ import android.widget.Spinner;
 
 import java.util.List;
 
-import omaryazeji.app.manifestanalyzer.Utility.AppUtil;
-import omaryazeji.app.manifestanalyzer.Models.Application;
+import omaryazeji.app.manifestanalyzer.Controller.AnalyzerController;
+import omaryazeji.app.manifestanalyzer.Model.Application;
 import omaryazeji.app.manifestanalyzer.R;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
-    AppUtil utility = new AppUtil();
+    AnalyzerController utility = new AnalyzerController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

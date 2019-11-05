@@ -2,7 +2,7 @@ package omaryazeji.app.manifestanalyzer.Interfaces;
 import android.content.Context;
 import java.util.List;
 
-import omaryazeji.app.manifestanalyzer.Models.Application;
+import omaryazeji.app.manifestanalyzer.Model.Application;
 
 public interface IAnalyzer {
      //ToDo: Get all installed application on the device

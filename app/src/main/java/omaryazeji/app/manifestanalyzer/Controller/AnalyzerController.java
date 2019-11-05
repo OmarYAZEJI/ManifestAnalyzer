@@ -1,23 +1,16 @@
-package omaryazeji.app.manifestanalyzer.Utility;
+package omaryazeji.app.manifestanalyzer.Controller;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import omaryazeji.app.manifestanalyzer.Interfaces.IAnalyzer;
-import omaryazeji.app.manifestanalyzer.Models.Application;
+import omaryazeji.app.manifestanalyzer.Model.Application;
 
-public class AppUtil implements IAnalyzer {
-
+public class AnalyzerController implements IAnalyzer {
 
     //TODO: This method will be used to get a list of all installed apps.
     @Override
@@ -52,7 +45,7 @@ public class AppUtil implements IAnalyzer {
                 | PackageManager.GET_SIGNATURES;
         try {
             PackageInfo pkgInfo = context.getPackageManager().getPackageInfo(sourceDir, flags);
-            return formatJsonObject(gson.toJson(pkgInfo));
+            return AppUtility.formatJsonObject(gson.toJson(pkgInfo));
 
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
@@ -61,13 +54,5 @@ public class AppUtil implements IAnalyzer {
         return result.toString();
     }
 
-    //TODO: This will reformat a json object.
-    public static String formatJsonObject(String jsonString) {
-        JsonParser parser = new JsonParser();
-        JsonObject json = parser.parse(jsonString).getAsJsonObject();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String formattedJsonObject = gson.toJson(json);
 
-        return formattedJsonObject;
-    }
 }
