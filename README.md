@@ -227,3 +227,6 @@ public interface IAnalyzer {
      String readManifestFileContent(String sourceDir, Context context);
 }
 ~~~~
+
+### 3rd party library used
+ * Gson A Java serialization/deserialization library to convert Java Objects into JSON and back
