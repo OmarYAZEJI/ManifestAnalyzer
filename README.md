@@ -139,3 +139,22 @@ public class InfoActivity extends AppCompatActivity {
     }
 }
 ~~~
+
+ ### Controller
+  * This layer represents the busniess logic of the application 
+  * All operation and function will be excuted here
+  * **AnalyzerController**
+  * **AppUtility** class contains of one funtion **formatJsonObject** to reformat the json object of the manifest file content 
+  ~~~java
+  public class AppUtility {
+    //TODO: This will reformat a json object.
+    public static String formatJsonObject(String jsonString) {
+        JsonParser parser = new JsonParser();
+        JsonObject json = parser.parse(jsonString).getAsJsonObject();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        String formattedJsonObject = gson.toJson(json);
+
+        return formattedJsonObject;
+    }
+}
+  ~~~~
