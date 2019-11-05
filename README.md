@@ -213,3 +213,17 @@ public class AnalyzerController implements IAnalyzer {
     }
 }
   ~~~~
+
+### IAnalyzer 
+  * java interface contains all the methods that will be used in the project
+  * **getAllInstalledAppsList** method to Get all installed application on the device
+  * **readManifestFileContent** Read the manifest file of the selected app
+  ~~~~java
+  
+public interface IAnalyzer {
+     //ToDo: Get all installed application on the device
+     List<Application> getAllInstalledAppsList(Context context);
+     //ToDo: Read the manifest file of the selected app
+     String readManifestFileContent(String sourceDir, Context context);
+}
+~~~~
