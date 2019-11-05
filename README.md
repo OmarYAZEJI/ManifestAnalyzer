@@ -17,9 +17,9 @@
  ### MVC Architecture
   The project was built with 3 differnt layers and one interface for methods structure:  
   
-    1. Model layer:  presents set of object classes that will be used during the interaction between other layers
-    2. View layer :  presents activites and user-interfaces and handle user interactions.
-    3. Controller layer : access, retrieve and manage application data
-    4. Interfaces layer : presents the structure of all methods used by object to interact with outside world
+    1. Model :  presents set of object classes that will be used during the interaction between other layers
+    2. View  :  presents activites and user-interfaces and handle user interactions.
+    3. Controller  : access, retrieve and manage application data
+    4. Interfaces  : presents the structure of all methods used by object to interact with outside world
 
 ![image](https://user-images.githubusercontent.com/17234785/68207039-254b6a00-ffdf-11e9-8c15-3690bf89833b.png)
