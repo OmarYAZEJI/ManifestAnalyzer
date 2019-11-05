@@ -57,3 +57,5 @@ public class Application {
 ```
 
  ### View
+ * This layer contains 2 Activity class MainActivity and infoActivity and will be used to handle the interaction with the user
+ * MainActivity will used to make the user select an app and click the button to read the content of selected app Manifest file 
