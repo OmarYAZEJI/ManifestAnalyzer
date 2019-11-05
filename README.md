@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
   * This activty will be used to show the content of selected Manifest file 
   * The content of Manifest file will be respresented as a json object
 
-~~~ java
+~~~java
 public class InfoActivity extends AppCompatActivity {
 
     @Override
@@ -149,7 +149,6 @@ public class InfoActivity extends AppCompatActivity {
    * **readManifestFileContent**  Read the manifest file of the selected app
 
     ~~~java
-
 public class AnalyzerController implements IAnalyzer {
 
     //TODO: This method will be used to get a list of all installed apps.
@@ -194,10 +193,12 @@ public class AnalyzerController implements IAnalyzer {
         return result.toString();
     }
 
-}
-  ~~~~
-  
-  * **AppUtility** class contains of one funtion **formatJsonObject** to reformat the json object of the manifest file content 
+} ~~~~
+
+
+
+ * **AppUtility** class contains of one funtion **formatJsonObject** to reformat the json object of the manifest file content 
+
   ~~~java
   public class AppUtility {
     //TODO: This will reformat a json object.
