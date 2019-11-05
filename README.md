@@ -13,6 +13,9 @@ An Android application (Java) that retrieves the Android manifest of another app
 ### Screenshot 3 & 4                                                                   
 ![Screenshot_1572951103](https://user-images.githubusercontent.com/17234785/68202206-48245100-ffd4-11e9-8a59-206722f2424b.png)      ![Screenshot_1572951106](https://user-images.githubusercontent.com/17234785/68202207-48bce780-ffd4-11e9-8272-689b8904fe5f.png)
 
+### Screenshot 5          
+![Screenshot_1572975577](https://user-images.githubusercontent.com/17234785/68231669-850c3a00-000c-11ea-9c81-378833925214.png)
+
 ## Technical Review
  ### MVC Architecture
   The project was built with 3 differnt layers and one interface for methods structure:  
