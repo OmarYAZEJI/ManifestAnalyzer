@@ -144,7 +144,7 @@ public class InfoActivity extends AppCompatActivity {
   * This layer represents the busniess logic of the application 
   * All operation and function will be excuted here
   * **AnalyzerController**
-   * Java class implements IAnalyzer methods
+   * Java class implements IAnalyzer methods that will be used to read the content of the manifest file
    * **getAllInstalledAppsList**  This method will be used to get a list of all installed apps.
    * **readManifestFileContent**  Read the manifest file of the selected app
    
@@ -198,7 +198,7 @@ public class AnalyzerController implements IAnalyzer {
 
 
 
- * **AppUtility** class contains of one funtion **formatJsonObject** to reformat the json object of the manifest file content 
+ * **AppUtility** class contains  **formatJsonObject**  funcion will be used to reformat the json object of the manifest file content 
 
   ~~~java
   public class AppUtility {
