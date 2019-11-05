@@ -23,3 +23,35 @@
     4. Interfaces  : presents the structure of all methods used by object to interact with outside world
 
 ![image](https://user-images.githubusercontent.com/17234785/68207039-254b6a00-ffdf-11e9-8c15-3690bf89833b.png)
+
+
+ ### Model
+  * This layer contains **Application** object class with Name and Dir
+  * Name: nmae of selected application
+  * Dir: directory of the selected app apk file, this will be used to reach to Manifest file.
+  * This object will be used to fill the spinner with installed applications list
+  
+```java
+public class Application {
+    public String Name;
+    public String Dir;
+
+    public Application(String name,String dir) {
+        Name = name;
+        Dir = dir;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    @Override
+    public String toString() {
+        return Name;
+    }
+}
+```
