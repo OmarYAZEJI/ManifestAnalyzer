@@ -1,4 +1,4 @@
-package omaryazeji.app.manifestanalyzer;
+package omaryazeji.app.manifestanalyzer.Models;
 
 public class Application {
     public String Name;

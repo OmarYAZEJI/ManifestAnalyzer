@@ -1,10 +1,12 @@
-package omaryazeji.app.manifestanalyzer;
+package omaryazeji.app.manifestanalyzer.Activites;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import omaryazeji.app.manifestanalyzer.R;
 
 public class InfoActivity extends AppCompatActivity {
 

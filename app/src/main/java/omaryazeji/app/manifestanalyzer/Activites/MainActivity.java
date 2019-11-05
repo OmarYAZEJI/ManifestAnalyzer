@@ -1,14 +1,17 @@
-package omaryazeji.app.manifestanalyzer;
+package omaryazeji.app.manifestanalyzer.Activites;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import java.util.List;
+
+import omaryazeji.app.manifestanalyzer.Utility.AppUtil;
+import omaryazeji.app.manifestanalyzer.Models.Application;
+import omaryazeji.app.manifestanalyzer.R;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
@@ -33,28 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 this, android.R.layout.select_dialog_item, spinnerArray);
 
         spinner.setAdapter(adapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
     }
 
     public void OnClickManifestAnalyzer(View view) {
         Application application = (Application) spinner.getSelectedItem();
-        String manifestInfo =  utility.getManifestFileOf(application.Dir, getApplicationContext());
+        String manifestInfo =  utility.getManifestFileContent(application.Dir, getApplicationContext());
 
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("ManifestInfo", manifestInfo.toString());
+        intent.putExtra("ManifestInfo", manifestInfo);
         startActivity(intent);
     }
 }
