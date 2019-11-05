@@ -54,5 +54,4 @@ public class AnalyzerController implements IAnalyzer {
         return result.toString();
     }
 
-
 }
