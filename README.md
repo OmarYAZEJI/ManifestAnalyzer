@@ -61,12 +61,10 @@ public class Application {
  * MainActivity will used to make the user select an app and click the button to read the content of selected app Manifest file 
  * infoActivity will be used to show the content of the Manifest file content
  
- #### .MainActivty.java
-
+ #### .MainActivity.java
+    * populateInstalledAppSpinner method will be called to fill the spinner with installed app list.
+    * OnClickManifestAnalyzer method will be used to handle the click event of ManifestAnalyzer button
  ~~~~ java
- 
- 
- 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
     AnalyzerController utility = new AnalyzerController();
