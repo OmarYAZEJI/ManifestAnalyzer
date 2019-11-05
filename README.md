@@ -60,3 +60,52 @@ public class Application {
  * This layer contains 2 Activity class MainActivity and infoActivity and will be used to handle the interaction with the user
  * MainActivity will used to make the user select an app and click the button to read the content of selected app Manifest file 
  * infoActivity will be used to show the content of the Manifest file content
+ 
+ #### .MainActivty.java
+
+ ~~~~ java
+ 
+ 
+ 
+public class MainActivity extends AppCompatActivity {
+    Spinner spinner;
+    AnalyzerController utility = new AnalyzerController();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        spinner = findViewById(R.id.spInstalledApp);
+
+        populateInstalledAppSpinner();
+    }
+
+    //ToDo: The method will be used to fill the spinner with all installed app on device
+    public void populateInstalledAppSpinner() {
+
+        //ToDo: Get all installed app list
+        List<Application> spinnerArray = utility.getAllInstalledAppsList(this);
+
+        //ToDo: Set adapter to the spinner
+        final ArrayAdapter<Application> adapter = new ArrayAdapter<>(
+                this, android.R.layout.select_dialog_item, spinnerArray);
+        spinner.setAdapter(adapter);
+    }
+
+    //ToDo: Click event for ManifestAnalyzer button
+    public void OnClickManifestAnalyzer(View view) {
+        //ToDo: Get selected app form the spinner
+        Application application = (Application) spinner.getSelectedItem();
+
+        //ToDo: Get selected app directory and read the content of the manifest file
+        String manifestInfo =  utility.readManifestFileContent(application.Dir, getApplicationContext());
+
+        //ToDo:  Send the content to info activity
+        Intent intent = new Intent(this, InfoActivity.class);
+        intent.putExtra("ManifestContent", manifestInfo);
+        startActivity(intent);
+    }
+}
+
+~~~~
