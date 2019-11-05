@@ -1,4 +1,4 @@
-package omaryazeji.app.manifestanalyzer.Presenter;
+package omaryazeji.app.manifestanalyzer.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
