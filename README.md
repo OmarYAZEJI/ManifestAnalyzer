@@ -14,12 +14,12 @@
 ![Screenshot_1572951103](https://user-images.githubusercontent.com/17234785/68202206-48245100-ffd4-11e9-8a59-206722f2424b.png)      ![Screenshot_1572951106](https://user-images.githubusercontent.com/17234785/68202207-48bce780-ffd4-11e9-8272-689b8904fe5f.png)
 
 ## Technical Review
- ### Clean Architecture
-  The project was built with 4 differnt layers :  
+ ### MVC Architecture
+  The project was built with 3 differnt layers :  
   
     1. Activites  layer - presents data to a screen and handle user interactions
     2. Interfaces layer - presents the structure of all methods used by object to interact with outside world
     3. Models  layer - presents set of object classes that will be used during the interaction between other layers
-    4. Utility layer - access, retrieve and manage application data
+    4. Controller layer - access, retrieve and manage application data
 
-![image](https://user-images.githubusercontent.com/17234785/68205851-524a4d80-ffdc-11e9-87f4-c6df26adc964.png)
+![image](https://user-images.githubusercontent.com/17234785/68206840-c259d300-ffde-11e9-805d-c1efc8704be0.png)
