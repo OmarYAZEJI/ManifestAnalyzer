@@ -1,5 +1,5 @@
 # ManifestAnalyzer
-
+An Android application (Java) that retrieves the Android manifest of another application installed on the same device 
 
 
 ## How to use
