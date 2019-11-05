@@ -147,8 +147,8 @@ public class InfoActivity extends AppCompatActivity {
    * Java class implements IAnalyzer methods
    * **getAllInstalledAppsList**  This method will be used to get a list of all installed apps.
    * **readManifestFileContent**  Read the manifest file of the selected app
-
-    ~~~java
+   
+~~~java 
 public class AnalyzerController implements IAnalyzer {
 
     //TODO: This method will be used to get a list of all installed apps.
@@ -193,7 +193,7 @@ public class AnalyzerController implements IAnalyzer {
         return result.toString();
     }
 
-} ~~~~
+}~~~~
 
 
 
