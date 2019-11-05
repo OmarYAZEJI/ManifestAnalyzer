@@ -64,7 +64,7 @@ public class Application {
  ### MainActivity.java
 
   * **populateInstalledAppSpinner** method will be called to fill the spinner with installed app list.
-  * **OnClickManifestAnalyzer** method will be used to handle the click event of ManifestAnalyzer button.
+  * **OnClickManifestAnalyzer** method will be used to handle the click event of ManifestAnalyzer button and pass the result to infoActivity .
 
 ~~~ java
 public class MainActivity extends AppCompatActivity {
