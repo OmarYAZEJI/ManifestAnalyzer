@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
  ### infoActivity.java
 
   * This activty will be used to show the content of selected Manifest file 
+  * The content of Manifest file will be respresented as a json object
 
 ~~~ java
 public class InfoActivity extends AppCompatActivity {
