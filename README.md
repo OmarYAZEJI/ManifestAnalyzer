@@ -26,8 +26,8 @@
 
 
  ### Model
-  * This layer contains **Application** object class with Name and Dir
-  * Name: nmae of selected application
+  * This layer contains **Application** object class with 2 properties Name and Dir
+  * Name: name of selected application
   * Dir: directory of the selected app apk file, this will be used to reach to Manifest file.
   * This object will be used to fill the spinner with installed applications list
   
