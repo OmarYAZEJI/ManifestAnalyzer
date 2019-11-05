@@ -4,6 +4,10 @@ An Android application (Java) that retrieves the Android manifest of another app
 
 ## How to use
 
+
+![ezgif com-resize](https://user-images.githubusercontent.com/17234785/68232489-3e1f4400-000e-11ea-8614-e89aa4868a42.gif)
+
+
 1. All installed applications on the device will be listed in the spinner.You have to select one from the list as shown in Screenshots 1&2
 2. After selecting an app from the list. CLick Manifest Analyzer button as shown in Screenshots 3.
 3. A new activity will be open to show the content of Manifest file of the selected app, s shown in Screenshots 4.
@@ -15,6 +19,8 @@ An Android application (Java) that retrieves the Android manifest of another app
 
 ### Screenshot 5          
 ![Screenshot_1572975577](https://user-images.githubusercontent.com/17234785/68231669-850c3a00-000c-11ea-9c81-378833925214.png)
+
+
 
 ## Technical Review
  ### MVC Architecture
