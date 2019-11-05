@@ -19,7 +19,7 @@ import omaryazeji.app.manifestanalyzer.Models.Application;
 public class AppUtil implements IAnalyzer {
 
 
-    //TODO: The method will be used to get a list of all installed apps.
+    //TODO: This method will be used to get a list of all installed apps.
     @Override
     public List<Application> getAllInstalledAppsList(Context context) {
         final PackageManager packageManager = context.getPackageManager();
@@ -36,8 +36,9 @@ public class AppUtil implements IAnalyzer {
         return applicationList;
     }
 
+    //ToDo: Read the manifest file of the selected app
     @Override
-    public String getManifestFileContent(String sourceDir, Context context) {
+    public String readManifestFileContent(String sourceDir, Context context) {
         StringBuilder result = new StringBuilder();
         Gson gson = new Gson();
 
@@ -60,12 +61,13 @@ public class AppUtil implements IAnalyzer {
         return result.toString();
     }
 
+    //TODO: This will reformat a json object.
     public static String formatJsonObject(String jsonString) {
         JsonParser parser = new JsonParser();
         JsonObject json = parser.parse(jsonString).getAsJsonObject();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String formatedJsonObject = gson.toJson(json);
+        String formattedJsonObject = gson.toJson(json);
 
-        return formatedJsonObject;
+        return formattedJsonObject;
     }
 }

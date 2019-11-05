@@ -15,7 +15,7 @@ import omaryazeji.app.manifestanalyzer.R;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
-    final AppUtil utility = new AppUtil();
+    AppUtil utility = new AppUtil();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,20 +30,26 @@ public class MainActivity extends AppCompatActivity {
     //ToDo: The method will be used to fill the spinner with all installed app on device
     public void populateInstalledAppSpinner() {
 
+        //ToDo: Get all installed app list
         List<Application> spinnerArray = utility.getAllInstalledAppsList(this);
 
+        //ToDo: Set adapter to the spinner
         final ArrayAdapter<Application> adapter = new ArrayAdapter<>(
                 this, android.R.layout.select_dialog_item, spinnerArray);
-
         spinner.setAdapter(adapter);
     }
 
+    //ToDo: Click event for ManifestAnalyzer button
     public void OnClickManifestAnalyzer(View view) {
+        //ToDo: Get selected app form the spinner
         Application application = (Application) spinner.getSelectedItem();
-        String manifestInfo =  utility.getManifestFileContent(application.Dir, getApplicationContext());
 
+        //ToDo: Get selected app directory and read the content of the manifest file
+        String manifestInfo =  utility.readManifestFileContent(application.Dir, getApplicationContext());
+
+        //ToDo:  Send the content to info activity
         Intent intent = new Intent(this, InfoActivity.class);
-        intent.putExtra("ManifestInfo", manifestInfo);
+        intent.putExtra("ManifestContent", manifestInfo);
         startActivity(intent);
     }
 }
