@@ -3,6 +3,7 @@
 
 
 ## How to use
+
 1. All installed applications on the device will be listed in the spinner.You have to select one from the list as shown in Screenshots 1&2
 2. After selecting an app from the list. CLick Manifest Analyzer button as shown in Screenshots 3.
 3. A new activity will be open to show the content of Manifest file of the selected app, s shown in Screenshots 4.
@@ -14,11 +15,11 @@
 
 ## Technical Review
  ### Clean Architecture
-  The project is built with 4 differnt layers :  
+  The project was built with 4 differnt layers :  
   
-    1. Activites
-    2. Interfaces
-    3. Models
-    4. Utility
+    1. Activites  layer - presents data to a screen and handle user interactions
+    2. Interfaces layer - presents the structure of all methods used by object to interact with outside world
+    3. Models  layer - presents set of object classes that will be used during the interaction between other layers
+    4. Utility layer - access, retrieve and manage application data
 
 ![image](https://user-images.githubusercontent.com/17234785/68205851-524a4d80-ffdc-11e9-87f4-c6df26adc964.png)
