@@ -1,5 +1,4 @@
 package omaryazeji.app.manifestanalyzer.Controller;
-
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -16,9 +15,9 @@ public class AnalyzerController implements IAnalyzer {
     @Override
     public List<Application> getAllInstalledAppsList(Context context) {
         final PackageManager packageManager = context.getPackageManager();
+
         List<Application> applicationList = new ArrayList<>();
         applicationList.add(new Application("Please select an application", "TEST"));
-
         List<ApplicationInfo> packages = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
 
         for (ApplicationInfo packageInfo : packages) {
@@ -45,12 +44,11 @@ public class AnalyzerController implements IAnalyzer {
                 | PackageManager.GET_SIGNATURES;
         try {
             PackageInfo pkgInfo = context.getPackageManager().getPackageInfo(sourceDir, flags);
-            return AppUtility.formatJsonObject(gson.toJson(pkgInfo));
+            return AppUtility.getIntents(pkgInfo.applicationInfo.publicSourceDir);
 
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-
         return result.toString();
     }
 

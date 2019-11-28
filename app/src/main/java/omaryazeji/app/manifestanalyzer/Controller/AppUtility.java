@@ -4,11 +4,13 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.ProviderInfo;
 import android.content.pm.ServiceInfo;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+
+import java.io.InputStream;
+import java.util.jar.JarFile;
 
 public class AppUtility {
     //TODO: This will reformat a json object.
@@ -26,7 +28,7 @@ public class AppUtility {
 
         result += "Package name:" + packageInfo.packageName + "\n\n";
         result += "Version Name:" + packageInfo.versionName + "\n\n";
-        result += "minSdkVersion:" + packageInfo.applicationInfo.minSdkVersion + "\n\n";
+     //   result += "minSdkVersion:" + packageInfo.applicationInfo.minSdkVersion + "\n\n";
         result += "Data Dir:" + packageInfo.applicationInfo.dataDir + "\n\n";
         result += "First Install Time:" + packageInfo.firstInstallTime + "\n\n";
         result += "Last Update Time:" + packageInfo.lastUpdateTime + "\n\n";
@@ -70,5 +72,18 @@ public class AppUtility {
             result += "-------------------------------------------------------------------------------------- "+"\n\n";
         }
         return result;
+    }
+
+    public static String getIntents(String path) {
+        try {
+            JarFile jf = new JarFile(path);
+            InputStream is = jf.getInputStream(jf.getEntry("AndroidManifest.xml"));
+            byte[] xml = new byte[is.available()];
+            int br = is.read(xml);
+            return decompressXML.decompressXML(xml);
+        } catch (Exception ex) {
+
+        }
+        return  "";
     }
 }
